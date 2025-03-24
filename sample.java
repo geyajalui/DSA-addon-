@@ -35,10 +35,19 @@ public class sample {
 			for (int i=0;i<size;i++){
 		    arr[i]=sc.nextInt();
 			}
+			for(int i=0;i<size;i++) {
+				for(int j=0;j<size;j++)
+					if(arr[i]<arr[j])
+					{
+						int temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+					}
+			}
 		for(int i=0;i<size;i++) {
 			System.out.println(arr[i]+" ");
 		}
-		System.out.println("enter your value top find?");
+		System.out.println("enter your value to find?");
 		int find=sc.nextInt();
 		int left=0;
 		int right=size-1;
