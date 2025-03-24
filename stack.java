@@ -8,26 +8,46 @@ public class stack {
 		if(top<9)
 		{
 		stack1[++top]=val;
-		++top;
 	}
 		else
 		{
-			System.out.println("st");
+			System.out.println("stack overflow");
 		}
 	}
 		public void pop()
 		{
-			stack1[top--]=0;
-			for(int i=0;i<top;i++)
+			if(top>=0)
 			{
-				System.out.println(stack1);
+				System.out.println("popped:"+stack1[top--]);
+			}
+			else
+			{
+				System.out.println("stack underflow");
+			}
 				
 		}
-			public void peek()
-			{
-				System.out.println()
-			}
-			
+		
+			public void peek() {
+		        if (top >= 0) {
+		            System.out.println("Top value: " + stack1[top]);
+		        } else {
+		            System.out.println("Stack is empty. No top value.");
+		        }
+		    }
+			public void display() {
+		        if (top >= 0) {
+		            System.out.print("Stack elements: ");
+		            for (int i = 0; i <= top; i++) {
+		                System.out.print(stack1[i] + " ");
+		           
+		        } 
+		        }
+		            else 
+		            {
+		            System.out.println("Stack is empty.");
+		        }
 
 }
 }
+
+
